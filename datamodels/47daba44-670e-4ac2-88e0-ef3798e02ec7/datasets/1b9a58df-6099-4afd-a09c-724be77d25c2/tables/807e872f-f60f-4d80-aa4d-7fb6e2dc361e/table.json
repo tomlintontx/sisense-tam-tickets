@@ -1,0 +1,59 @@
+{
+    "buildBehavior": {
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "CSM Manager",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CSM Manager",
+            "oid": "f61f90c7-5ab0-4bfc-b0e8-02dfad76d27a",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "CSM",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CSM",
+            "oid": "76d09932-bd47-4d7e-9d62-801f3be65cb7",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "Segment",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "Segment",
+            "oid": "fe053375-cc0b-4fef-97bd-04019eec10e2",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "columnsDateTimePatterns": "{}",
+        "culture": "en-US",
+        "hasHeader": true,
+        "staticRange": ""
+    },
+    "dataset": "1b9a58df-6099-4afd-a09c-724be77d25c2",
+    "hidden": false,
+    "id": "csm_manager_mapping",
+    "isMaterialized": false,
+    "name": "csm_manager_mapping",
+    "oid": "807e872f-f60f-4d80-aa4d-7fb6e2dc361e",
+    "schemaName": "/tmp/-633742988.xlsx",
+    "tupleTransformations": [
+    ],
+    "type": "base"
+}

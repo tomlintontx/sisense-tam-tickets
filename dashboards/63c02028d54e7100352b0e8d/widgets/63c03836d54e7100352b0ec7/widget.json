@@ -1,0 +1,358 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63c02028d54e7100352b0e8d",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aNewIAAaJira",
+        "fullname": "LocalHost/New Jira",
+        "id": "aLOCALHOST_aNEWIAAaJIRA",
+        "title": "New Jira"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[csm_manager_mapping.CSM]",
+                            "index": 0
+                        },
+                        "instanceid": "7BD18-BB28-BE",
+                        "jaql": {
+                            "column": "CSM",
+                            "datatype": "text",
+                            "dim": "[csm_manager_mapping.CSM]",
+                            "merged": true,
+                            "table": "csm_manager_mapping",
+                            "title": "CSM"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "rows"
+            },
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "count([0A912-265])",
+                            "index": 1
+                        },
+                        "format": {
+                            "color": {
+                                "color": "transparent",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "b": true,
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "t": true,
+                                "type": "number"
+                            },
+                            "width": 93.78125
+                        },
+                        "instanceid": "69EAD-5FDC-5B",
+                        "jaql": {
+                            "context": {
+                                "[0A912-265]": {
+                                    "column": "ticket_key",
+                                    "datatype": "text",
+                                    "dim": "[Jira Issues.ticket_key]",
+                                    "table": "Jira Issues",
+                                    "title": "Ticket Key"
+                                }
+                            },
+                            "datatype": "numeric",
+                            "formula": "count([0A912-265])",
+                            "sort": "desc",
+                            "sortDetails": {
+                                "dir": "desc",
+                                "field": 1,
+                                "initialized": true,
+                                "isLastApplied": true,
+                                "measurePath": null,
+                                "sortingLastDimension": true
+                            },
+                            "title": "Tickets",
+                            "type": "measure"
+                        },
+                        "panel": "measures"
+                    },
+                    {
+                        "field": {
+                            "id": "count([0A912-265])",
+                            "index": 2
+                        },
+                        "format": {
+                            "color": {
+                                "color": "transparent",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "b": true,
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "t": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "D05FB-D68E-E6",
+                        "jaql": {
+                            "context": {
+                                "[BD84C-1F5]": {
+                                    "column": "labels",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aNewIAAaJira",
+                                        "fullname": "LocalHost/New Jira",
+                                        "id": "aLOCALHOST_aNEWIAAaJIRA",
+                                        "title": "New Jira"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Jira Issues.labels]",
+                                    "dimension": "[csm_manager_mapping.CSM]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "OOS"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "firstday": "mon",
+                                    "locale": "en-us",
+                                    "table": "Jira Issues",
+                                    "title": "labels"
+                                },
+                                "[CCC5E-264]": {
+                                    "agg": "count",
+                                    "column": "ticket_key",
+                                    "datatype": "text",
+                                    "dim": "[Jira Issues.ticket_key]",
+                                    "table": "Jira Issues",
+                                    "title": "# of unique ticket_key"
+                                }
+                            },
+                            "datatype": "numeric",
+                            "formula": "([CCC5E-264],[BD84C-1F5])",
+                            "title": "OOS",
+                            "type": "measure"
+                        },
+                        "panel": "measures"
+                    },
+                    {
+                        "field": {
+                            "id": "([672A0-306]-[BCDAE-1B1])/[672A0-306]",
+                            "index": 3
+                        },
+                        "format": {
+                            "color": {
+                                "conditions": [
+                                    {
+                                        "color": "#ffa3a0",
+                                        "expression": "0.7",
+                                        "operator": "<"
+                                    },
+                                    {
+                                        "color": "#ffcd84",
+                                        "expression": "0.8",
+                                        "operator": "<"
+                                    },
+                                    {
+                                        "color": "#6eda55",
+                                        "expression": "0.8",
+                                        "operator": "≥"
+                                    }
+                                ],
+                                "type": "condition"
+                            },
+                            "mask": {
+                                "decimals": 0,
+                                "percent": true
+                            }
+                        },
+                        "instanceid": "D7337-690E-75",
+                        "jaql": {
+                            "context": {
+                                "[672A0-306]": {
+                                    "context": {
+                                        "[0A912-265]": {
+                                            "column": "ticket_key",
+                                            "datatype": "text",
+                                            "dim": "[Jira Issues.ticket_key]",
+                                            "table": "Jira Issues",
+                                            "title": "Ticket Key"
+                                        }
+                                    },
+                                    "formula": "count([0A912-265])",
+                                    "title": "Tickets",
+                                    "type": "measure"
+                                },
+                                "[BCDAE-1B1]": {
+                                    "context": {
+                                        "[32525-7A5]": {
+                                            "agg": "count",
+                                            "column": "ticket_key",
+                                            "datatype": "text",
+                                            "dim": "[Jira Issues.ticket_key]",
+                                            "table": "Jira Issues",
+                                            "title": "# of unique ticket_key"
+                                        },
+                                        "[4F11C-D50]": {
+                                            "column": "labels",
+                                            "datatype": "text",
+                                            "dim": "[Jira Issues.labels]",
+                                            "table": "Jira Issues",
+                                            "title": "labels"
+                                        },
+                                        "[9A926-7AA]": {
+                                            "column": "labels",
+                                            "datasource": {
+                                                "address": "LocalHost",
+                                                "database": "aNewIAAaJira",
+                                                "fullname": "LocalHost/New Jira",
+                                                "id": "aLOCALHOST_aNEWIAAaJIRA",
+                                                "title": "New Jira"
+                                            },
+                                            "datatype": "text",
+                                            "dim": "[Jira Issues.labels]",
+                                            "dimension": "[csm_manager_mapping.CSM]",
+                                            "filter": {
+                                                "explicit": true,
+                                                "members": [
+                                                    "OOS"
+                                                ],
+                                                "multiSelection": true
+                                            },
+                                            "firstday": "mon",
+                                            "locale": "en-us",
+                                            "table": "Jira Issues",
+                                            "title": "labels"
+                                        }
+                                    },
+                                    "formula": "([32525-7A5],[9A926-7AA])",
+                                    "title": "OOS Tickets",
+                                    "type": "measure"
+                                }
+                            },
+                            "datatype": "numeric",
+                            "formula": "([672A0-306]-[BCDAE-1B1])/[672A0-306]",
+                            "title": "Good Ticket %",
+                            "type": "measure"
+                        },
+                        "panel": "measures"
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "columns"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63c03836d54e7100352b0ec7",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "drillTarget": {
+            "caption": "_drill_ TAM Tickets",
+            "oid": "63c031f0d54e7100352b0eae"
+        },
+        "drillToAnywhere": true,
+        "selector": false,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "realTimeRefreshing": false,
+    "style": {
+        "automaticHeight": true,
+        "colors": {
+            "columns": false,
+            "headers": false,
+            "members": false,
+            "rows": true,
+            "totals": false
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "csm",
+                    "plural": "CSM",
+                    "singular": "CSM",
+                    "title": "CSM"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "pageSize": 25,
+        "scroll": false
+    },
+    "subtype": "pivot2",
+    "title": "Tickets By CSM",
+    "type": "pivot2"
+}

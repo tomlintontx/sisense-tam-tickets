@@ -1,0 +1,334 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "continuousDates": false,
+    "dashboardid": "63c02028d54e7100352b0e8d",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aNewIAAaJira",
+        "fullname": "LocalHost/New Jira",
+        "id": "aLOCALHOST_aNEWIAAaJIRA",
+        "title": "New Jira"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "custom": true,
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": false,
+        "displayFilterPane": false,
+        "displayHeaderRow": false,
+        "displayToolbarRow": false,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "drilledDashboardDisplay": {
+    },
+    "hasExcessiveSeries": false,
+    "metadata": {
+        "drillHistory": [
+            {
+                "jaql": {
+                    "column": "customer",
+                    "datatype": "text",
+                    "dim": "[Jira Issues.customer]",
+                    "table": "Jira Issues",
+                    "title": "customer"
+                },
+                "parent": {
+                    "format": {
+                        "continuous": false
+                    },
+                    "instanceid": "828EC-B102-6D",
+                    "jaql": {
+                        "column": "labels",
+                        "datatype": "text",
+                        "dim": "[Jira Issues.labels]",
+                        "table": "Jira Issues",
+                        "title": "labels"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "labels",
+                        "datatype": "text",
+                        "dim": "[Jira Issues.labels]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "tech_guidance"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "Jira Issues",
+                        "title": "labels"
+                    }
+                }
+            },
+            {
+                "jaql": {
+                    "column": "CSM",
+                    "datatype": "text",
+                    "dim": "[csm_manager_mapping.CSM]",
+                    "merged": true,
+                    "table": "csm_manager_mapping",
+                    "title": "CSM"
+                },
+                "parent": {
+                    "format": {
+                        "continuous": false
+                    },
+                    "instanceid": "828EC-B102-6D",
+                    "jaql": {
+                        "column": "labels",
+                        "datatype": "text",
+                        "dim": "[Jira Issues.labels]",
+                        "table": "Jira Issues",
+                        "title": "labels"
+                    }
+                },
+                "through": {
+                    "jaql": {
+                        "column": "labels",
+                        "datatype": "text",
+                        "dim": "[Jira Issues.labels]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "tech_guidance"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "Jira Issues",
+                        "title": "labels"
+                    }
+                }
+            }
+        ],
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "continuous": false
+                        },
+                        "instanceid": "828EC-B102-6D",
+                        "jaql": {
+                            "column": "labels",
+                            "datatype": "text",
+                            "dim": "[Jira Issues.labels]",
+                            "table": "Jira Issues",
+                            "title": "labels"
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "color": "#00cee6",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "2E122-8A7D-6F",
+                        "jaql": {
+                            "agg": "count",
+                            "column": "ticket_key",
+                            "datatype": "text",
+                            "dim": "[Jira Issues.ticket_key]",
+                            "sort": "desc",
+                            "table": "Jira Issues",
+                            "title": "Tickets"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "nullAsZero": false,
+    "oid": "63c0216ad54e7100352b0e98",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "drillTarget": {
+            "caption": "_drill_ TAM Tickets",
+            "oid": "63c031f0d54e7100352b0eae"
+        },
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "realTimeRefreshing": false,
+    "script": "./script.js",
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "labels",
+                    "plural": "labels",
+                    "singular": "labels",
+                    "title": "labels"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "labels": {
+                "enabled": false,
+                "stacked": false,
+                "stackedPercentage": false,
+                "types": {
+                    "count": false,
+                    "percentage": false,
+                    "relative": false,
+                    "totals": false
+                }
+            },
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "hideMinMax": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "hideMinMax": false,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "column/classic",
+    "title": "Tickets by Label",
+    "type": "chart/column"
+}

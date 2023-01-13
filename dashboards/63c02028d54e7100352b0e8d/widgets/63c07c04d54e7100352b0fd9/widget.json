@@ -1,0 +1,221 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "63c02028d54e7100352b0e8d",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aNewIAAaJira",
+        "fullname": "LocalHost/New Jira",
+        "id": "aLOCALHOST_aNEWIAAaJIRA",
+        "title": "New Jira"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": false,
+        "displayFilterPane": true,
+        "displayHeaderRow": false,
+        "displayToolbarRow": false,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[Jira Issues.assignee]",
+                            "index": 0
+                        },
+                        "instanceid": "1F22E-3E8F-F0",
+                        "jaql": {
+                            "column": "assignee",
+                            "datatype": "text",
+                            "dim": "[Jira Issues.assignee]",
+                            "table": "Jira Issues",
+                            "title": "assignee"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "rows"
+            },
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "count([0A912-265])",
+                            "index": 1
+                        },
+                        "format": {
+                            "color": {
+                                "color": "transparent",
+                                "type": "color"
+                            },
+                            "colorSecond": {
+                                "color": "#00cee6",
+                                "type": "color"
+                            },
+                            "databars": true,
+                            "mask": {
+                                "b": true,
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "t": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "2C77D-1208-7D",
+                        "jaql": {
+                            "context": {
+                                "[0A912-265]": {
+                                    "column": "ticket_key",
+                                    "datatype": "text",
+                                    "dim": "[Jira Issues.ticket_key]",
+                                    "table": "Jira Issues",
+                                    "title": "Ticket Key"
+                                }
+                            },
+                            "datatype": "numeric",
+                            "formula": "count([0A912-265])",
+                            "title": "Tickets",
+                            "type": "measure"
+                        },
+                        "panel": "measures"
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "columns"
+            },
+            {
+                "items": [
+                    {
+                        "instanceid": "B1F0D-396B-E5",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "status",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aNewIAAaJira",
+                                "fullname": "LocalHost/New Jira",
+                                "id": "aLOCALHOST_aNEWIAAaJIRA",
+                                "title": "New Jira"
+                            },
+                            "datatype": "text",
+                            "dim": "[Jira Issues.status]",
+                            "dimension": "[Jira Issues.labels]",
+                            "filter": {
+                                "exclude": {
+                                    "members": [
+                                        "Done"
+                                    ]
+                                },
+                                "explicit": false,
+                                "isCondition": true,
+                                "multiSelection": true
+                            },
+                            "firstday": "mon",
+                            "level": "years",
+                            "locale": "en-us",
+                            "table": "Jira Issues",
+                            "title": "status"
+                        },
+                        "panel": "scope"
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63c07c04d54e7100352b0fd9",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillToAnywhere": true,
+        "selector": false,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "realTimeRefreshing": false,
+    "style": {
+        "automaticHeight": true,
+        "colors": {
+            "columns": false,
+            "headers": false,
+            "members": false,
+            "rows": true,
+            "totals": false
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "assignee",
+                    "plural": "assignee",
+                    "singular": "assignee",
+                    "title": "assignee"
+                },
+                {
+                    "id": "status",
+                    "plural": "status",
+                    "singular": "status",
+                    "title": "status"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "pageSize": 25,
+        "scroll": false
+    },
+    "subtype": "pivot2",
+    "title": "Open Tickets",
+    "type": "pivot2"
+}

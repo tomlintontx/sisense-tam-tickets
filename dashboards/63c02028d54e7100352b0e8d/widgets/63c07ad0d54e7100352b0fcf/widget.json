@@ -1,0 +1,310 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "continuousDates": false,
+    "dashboardid": "63c02028d54e7100352b0e8d",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aNewIAAaJira",
+        "fullname": "LocalHost/New Jira",
+        "id": "aLOCALHOST_aNEWIAAaJIRA",
+        "title": "New Jira"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": false,
+        "displayFilterPane": true,
+        "displayHeaderRow": false,
+        "displayToolbarRow": false,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "hasExcessiveSeries": false,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "continuous": false
+                        },
+                        "instanceid": "8D43C-9C5E-B7",
+                        "jaql": {
+                            "column": "assignee",
+                            "datatype": "text",
+                            "dim": "[Jira Issues.assignee]",
+                            "table": "Jira Issues",
+                            "title": "assignee"
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "color": "#00cee6",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "E7B05-850E-83",
+                        "jaql": {
+                            "context": {
+                                "[0AD14-EC1]": {
+                                    "column": "status",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aNewIAAaJira",
+                                        "fullname": "LocalHost/New Jira",
+                                        "id": "aLOCALHOST_aNEWIAAaJIRA",
+                                        "title": "New Jira"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Jira Issues.status]",
+                                    "dimension": "[Jira Issues.assignee]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "Done"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "firstday": "mon",
+                                    "locale": "en-us",
+                                    "table": "Jira Issues",
+                                    "title": "status"
+                                },
+                                "[0DF0D-DF5]": {
+                                    "agg": "count",
+                                    "column": "ticket_key",
+                                    "datatype": "text",
+                                    "dim": "[Jira Issues.ticket_key]",
+                                    "table": "Jira Issues",
+                                    "title": "# of unique ticket_key"
+                                }
+                            },
+                            "formula": "([0DF0D-DF5],[0AD14-EC1])",
+                            "sort": "desc",
+                            "title": "Completed Tickets",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                    {
+                        "instanceid": "1DFB9-5460-F1",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "assignee",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aNewIAAaJira",
+                                "fullname": "LocalHost/New Jira",
+                                "id": "aLOCALHOST_aNEWIAAaJIRA",
+                                "title": "New Jira"
+                            },
+                            "datatype": "text",
+                            "dim": "[Jira Issues.assignee]",
+                            "dimension": "[Jira Issues.assignee]",
+                            "filter": {
+                                "exclude": {
+                                    "members": [
+                                        "unassigned"
+                                    ]
+                                },
+                                "explicit": false,
+                                "isCondition": true,
+                                "multiSelection": true
+                            },
+                            "firstday": "mon",
+                            "level": "years",
+                            "locale": "en-us",
+                            "table": "Jira Issues",
+                            "title": "assignee"
+                        }
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "nullAsZero": false,
+    "oid": "63c07ad0d54e7100352b0fcf",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "realTimeRefreshing": false,
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "assignee",
+                    "plural": "assignee",
+                    "singular": "assignee",
+                    "title": "assignee"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "labels": {
+                "enabled": false,
+                "stacked": false,
+                "stackedPercentage": false,
+                "types": {
+                    "count": false,
+                    "percentage": false,
+                    "relative": false,
+                    "totals": false
+                }
+            },
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": false,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "hideMinMax": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "hideMinMax": false,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "column/classic",
+    "title": "Completed Tickets by TAM",
+    "type": "chart/column"
+}

@@ -1,0 +1,323 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "continuousDates": false,
+    "dashboardid": "63c02028d54e7100352b0e8d",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aNewIAAaJira",
+        "fullname": "localhost/New Jira",
+        "id": "localhost_aNewIAAaJira",
+        "live": false,
+        "title": "New Jira"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": false,
+        "displayFilterPane": true,
+        "displayHeaderRow": false,
+        "displayToolbarRow": false,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "hasExcessiveSeries": false,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "shortDate",
+                                "isdefault": true,
+                                "minutes": "HH:mm",
+                                "months": "MM/yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
+                        },
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "3DD37-15C2-F3",
+                        "jaql": {
+                            "column": "created",
+                            "datatype": "datetime",
+                            "dim": "[Jira Issues.created (Calendar)]",
+                            "level": "months",
+                            "merged": true,
+                            "table": "Jira Issues",
+                            "title": "Months in created"
+                        }
+                    }
+                ],
+                "name": "x-axis"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "color": "#00cee6",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "2CBE4-4B25-C2",
+                        "jaql": {
+                            "context": {
+                                "[0A912-265]": {
+                                    "column": "ticket_key",
+                                    "datatype": "text",
+                                    "dim": "[Jira Issues.ticket_key]",
+                                    "table": "Jira Issues",
+                                    "title": "Ticket Key"
+                                }
+                            },
+                            "formula": "count([0A912-265])",
+                            "title": "Tickets",
+                            "type": "measure"
+                        }
+                    },
+                    {
+                        "format": {
+                            "color": {
+                                "color": "#9b9bd7",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "E0F4C-355D-8A",
+                        "jaql": {
+                            "context": {
+                                "[32525-7A5]": {
+                                    "agg": "count",
+                                    "column": "ticket_key",
+                                    "datatype": "text",
+                                    "dim": "[Jira Issues.ticket_key]",
+                                    "table": "Jira Issues",
+                                    "title": "# of unique ticket_key"
+                                },
+                                "[4F11C-D50]": {
+                                    "column": "labels",
+                                    "datatype": "text",
+                                    "dim": "[Jira Issues.labels]",
+                                    "table": "Jira Issues",
+                                    "title": "labels"
+                                },
+                                "[9A926-7AA]": {
+                                    "column": "labels",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aNewIAAaJira",
+                                        "fullname": "LocalHost/New Jira",
+                                        "id": "aLOCALHOST_aNEWIAAaJIRA",
+                                        "title": "New Jira"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Jira Issues.labels]",
+                                    "dimension": "[csm_manager_mapping.CSM]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "OOS"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "firstday": "mon",
+                                    "locale": "en-us",
+                                    "table": "Jira Issues",
+                                    "title": "labels"
+                                }
+                            },
+                            "formula": "([32525-7A5],[9A926-7AA])",
+                            "title": "OOS Tickets",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "nullAsZero": false,
+    "oid": "63c02066d54e7100352b0e8f",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "realTimeRefreshing": false,
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "months_in_created",
+                    "plural": "Months in created",
+                    "singular": "Months in created",
+                    "title": "Months in created"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "line/basic",
+    "tickLevel": "month",
+    "title": "TAM Tickets by Created Date",
+    "type": "chart/line"
+}

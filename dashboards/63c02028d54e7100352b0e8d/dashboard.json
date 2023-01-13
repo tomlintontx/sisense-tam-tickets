@@ -1,0 +1,72 @@
+{
+    "allowChangeSubscription": false,
+    "dataExploration": false,
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aNewIAAaJira",
+        "fullname": "localhost/New Jira",
+        "id": "localhost_aNewIAAaJira",
+        "live": false,
+        "title": "New Jira"
+    },
+    "defaultFilterRelations": null,
+    "desc": "",
+    "filters": "./filters.json",
+    "hierarchies": [
+    ],
+    "layout": "./layout.json",
+    "oid": "63c02028d54e7100352b0e8d",
+    "settings": {
+        "autoUpdateOnFiltersChange": true
+    },
+    "style": {
+        "name": "vivid",
+        "palette": {
+            "colors": [
+                "#00cee6",
+                "#9b9bd7",
+                "#6EDA55",
+                "#fc7570",
+                "#fbb755",
+                "#218A8C"
+            ],
+            "isSystem": true,
+            "name": "Vivid",
+            "sortOrder": 10,
+            "systemDefault": true
+        }
+    },
+    "subscription": {
+        "active": false,
+        "context": {
+            "dashboardid": "63c02028d54e7100352b0e8d"
+        },
+        "emailSettings": {
+            "isEmail": true,
+            "isPdf": false
+        },
+        "executionPerDay": 1,
+        "isDataChange": true,
+        "reportType": {
+            "inline": true
+        },
+        "schedule": "* * * * * *",
+        "startAt": "2023-01-12",
+        "subscribe": false,
+        "timezone": 360,
+        "type": "onUpdate",
+        "tzName": "America/Chicago"
+    },
+    "title": "TAM Ticket Analysis",
+    "widgets": [
+        "./widgets/63c02066d54e7100352b0e8f/widget.json",
+        "./widgets/63c020fcd54e7100352b0e91/widget.json",
+        "./widgets/63c02101d54e7100352b0e93/widget.json",
+        "./widgets/63c0216ad54e7100352b0e98/widget.json",
+        "./widgets/63c03836d54e7100352b0ec7/widget.json",
+        "./widgets/63c0395bd54e7100352b0ec9/widget.json",
+        "./widgets/63c060bdd54e7100352b0fa0/widget.json",
+        "./widgets/63c07ad0d54e7100352b0fcf/widget.json",
+        "./widgets/63c07c04d54e7100352b0fd9/widget.json"
+    ]
+}

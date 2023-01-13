@@ -1,0 +1,65 @@
+{
+    "allowChangeSubscription": false,
+    "dataExploration": false,
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aNewIAAaJira",
+        "fullname": "localhost/New Jira",
+        "id": "localhost_aNewIAAaJira",
+        "live": false,
+        "title": "New Jira"
+    },
+    "defaultFilterRelations": null,
+    "desc": "",
+    "filters": "./filters.json",
+    "hierarchies": [
+    ],
+    "layout": "./layout.json",
+    "oid": "63c031f0d54e7100352b0eae",
+    "script": "./script.js",
+    "settings": {
+        "autoUpdateOnFiltersChange": true
+    },
+    "style": {
+        "name": "vivid",
+        "palette": {
+            "colors": [
+                "#00cee6",
+                "#9b9bd7",
+                "#6EDA55",
+                "#fc7570",
+                "#fbb755",
+                "#218A8C"
+            ],
+            "isSystem": true,
+            "name": "Vivid",
+            "sortOrder": 10,
+            "systemDefault": true
+        }
+    },
+    "subscription": {
+        "active": false,
+        "context": {
+            "dashboardid": "63c031f0d54e7100352b0eae"
+        },
+        "emailSettings": {
+            "isEmail": true,
+            "isPdf": false
+        },
+        "executionPerDay": 1,
+        "isDataChange": true,
+        "reportType": {
+            "inline": true
+        },
+        "schedule": "* * * * * *",
+        "startAt": "2023-01-12",
+        "subscribe": false,
+        "timezone": 0,
+        "type": "onUpdate",
+        "tzName": "Europe/London"
+    },
+    "title": "_drill_ TAM Tickets",
+    "widgets": [
+        "./widgets/63c03238d54e7100352b0eb0/widget.json"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "buildDestination": {
+        "destination": "elasticube"
+    },
+    "datasets": [
+        "./1b9a58df-6099-4afd-a09c-724be77d25c2/dataset.json",
+        "./f1b9d412-a182-4b01-b5f9-02ba86d70528/dataset.json"
+    ],
+    "experiments": {
+    },
+    "fiscal": "system",
+    "oid": "47daba44-670e-4ac2-88e0-ef3798e02ec7",
+    "relationType": "regular",
+    "relations": "./relations.json",
+    "schemaId": null,
+    "title": "New Jira",
+    "type": "extract"
+}

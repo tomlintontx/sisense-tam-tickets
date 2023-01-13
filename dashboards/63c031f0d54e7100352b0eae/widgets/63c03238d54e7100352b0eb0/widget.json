@@ -1,0 +1,257 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "continuousDates": false,
+    "dashboardid": "63c031f0d54e7100352b0eae",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aNewIAAaJira",
+        "fullname": "localhost/New Jira",
+        "id": "localhost_aNewIAAaJira",
+        "lastBuildTime": "2023-01-12T14:56:04.021Z",
+        "live": false,
+        "title": "New Jira"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": false,
+        "displayFilterPane": true,
+        "displayHeaderRow": false,
+        "displayToolbarRow": false,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[Jira Issues.ticket_key]",
+                            "index": 0
+                        },
+                        "instanceid": "8A249-C16C-10",
+                        "jaql": {
+                            "column": "ticket_key",
+                            "datatype": "text",
+                            "dim": "[Jira Issues.ticket_key]",
+                            "table": "Jira Issues",
+                            "title": "ID"
+                        },
+                        "panel": "rows"
+                    },
+                    {
+                        "field": {
+                            "id": "[Jira Issues.summary]",
+                            "index": 1
+                        },
+                        "format": {
+                            "width": 471.125
+                        },
+                        "instanceid": "58900-5558-D4",
+                        "jaql": {
+                            "column": "summary",
+                            "datatype": "text",
+                            "dim": "[Jira Issues.summary]",
+                            "table": "Jira Issues",
+                            "title": "Summary"
+                        },
+                        "panel": "rows"
+                    },
+                    {
+                        "field": {
+                            "id": "[Jira Issues.labels]",
+                            "index": 2
+                        },
+                        "instanceid": "20244-2DE1-DE",
+                        "jaql": {
+                            "column": "labels",
+                            "datatype": "text",
+                            "dim": "[Jira Issues.labels]",
+                            "table": "Jira Issues",
+                            "title": "Labels"
+                        },
+                        "panel": "rows"
+                    },
+                    {
+                        "disabled": false,
+                        "field": {
+                            "id": "[Jira Issues.ticket_url]",
+                            "index": 3
+                        },
+                        "instanceid": "D320A-76CF-F9",
+                        "jaql": {
+                            "column": "ticket_url",
+                            "datatype": "text",
+                            "dim": "[Jira Issues.ticket_url]",
+                            "sort": "desc",
+                            "sortDetails": {
+                                "dir": "desc",
+                                "field": 2,
+                                "initialized": true,
+                                "isLastApplied": true,
+                                "sortingLastDimension": false
+                            },
+                            "table": "Jira Issues",
+                            "title": "Ticket"
+                        },
+                        "panel": "rows"
+                    },
+                    {
+                        "field": {
+                            "id": "[Jira Issues.sf]",
+                            "index": 4
+                        },
+                        "instanceid": "C7706-51CD-9A",
+                        "jaql": {
+                            "column": "sf",
+                            "datatype": "text",
+                            "dim": "[Jira Issues.sf]",
+                            "table": "Jira Issues",
+                            "title": "Salesforce"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "rows"
+            },
+            {
+                "items": [
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "columns"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "nullAsZero": false,
+    "oid": "63c03238d54e7100352b0eb0",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillToAnywhere": false,
+        "imageColumns": [
+        ],
+        "selector": false,
+        "selectorLocked": false,
+        "triggersDomready": true
+    },
+    "prevSortObjects": [
+    ],
+    "realTimeRefreshing": false,
+    "style": {
+        "automaticHeight": true,
+        "colors": {
+            "columns": false,
+            "headers": false,
+            "members": false,
+            "rows": true,
+            "totals": false
+        },
+        "columnsGrandTotal": false,
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "id",
+                    "plural": "ID",
+                    "singular": "ID",
+                    "title": "ID"
+                },
+                {
+                    "id": "summary",
+                    "plural": "summary",
+                    "singular": "summary",
+                    "title": "summary"
+                },
+                {
+                    "id": "labels",
+                    "plural": "labels",
+                    "singular": "labels",
+                    "title": "labels"
+                },
+                {
+                    "id": "ticket",
+                    "plural": "Ticket",
+                    "singular": "Ticket",
+                    "title": "Ticket"
+                },
+                {
+                    "id": "salesforce",
+                    "plural": "Salesforce",
+                    "singular": "Salesforce",
+                    "title": "Salesforce"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "pageSize": 25,
+        "scroll": false,
+        "widgetDesign": {
+            "widgetBackgroundColor": "#FFFFFF",
+            "widgetBorderColor": "#9EA2AB",
+            "widgetBorderEnabled": false,
+            "widgetCornerRadius": "none",
+            "widgetShadow": "none",
+            "widgetSpacing": "none",
+            "widgetTitleAlignment": "left",
+            "widgetTitleBackgroundColor": "#FFFFFF",
+            "widgetTitleColor": "#5B6372",
+            "widgetTitleDividerColor": "#5B6372",
+            "widgetTitleDividerEnabled": false
+        }
+    },
+    "subtype": "pivot2",
+    "title": "Tickets",
+    "type": "pivot2"
+}

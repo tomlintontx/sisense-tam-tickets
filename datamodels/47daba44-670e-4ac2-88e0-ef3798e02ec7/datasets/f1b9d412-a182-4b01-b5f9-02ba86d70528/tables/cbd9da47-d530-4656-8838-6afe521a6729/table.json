@@ -1,0 +1,269 @@
+{
+    "buildBehavior": {
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "ticket_key",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "ticket_key",
+            "oid": "732a19a6-2876-4554-a646-daf0524da66b",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "ticket_url",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "ticket_url",
+            "oid": "7d0124a1-a329-457d-91fd-01334da544e9",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "summary",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "summary",
+            "oid": "999ccb50-8d7e-4552-8da2-2ba104155fa6",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "acv",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "acv",
+            "oid": "f3b7de55-e0c5-47d3-b18d-11575652a973",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 6
+        },
+        {
+            "hidden": false,
+            "id": "region",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "region",
+            "oid": "3cec1929-0dce-49b7-ae4a-279e1f786f86",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "customer",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "customer",
+            "oid": "310a64c6-35b4-4c6c-822d-36634c6d6540",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "sf",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "sf",
+            "oid": "4ed4f5f0-1dac-4bb7-9173-a75f8ea3d040",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "status:",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "status:",
+            "oid": "7b4bfbbb-6399-46de-87a5-b5156f5436b3",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "resolution_date",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "resolution_date",
+            "oid": "92133da8-695c-4dab-9538-6fd8c5f2dd8c",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 4
+        },
+        {
+            "hidden": false,
+            "id": "created",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "created",
+            "oid": "57876f45-6089-4abe-9f02-8f7dea1ce600",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 4
+        },
+        {
+            "hidden": false,
+            "id": "updated",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "updated",
+            "oid": "7bfd207b-f259-4101-90e7-212a5d30e180",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 4
+        },
+        {
+            "hidden": false,
+            "id": "reporter",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "reporter",
+            "oid": "1c5cea4f-c6d2-4250-a723-75356bb89b54",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "labels",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "labels",
+            "oid": "e90f6edb-b823-4f3c-a5b1-906f72e85bc7",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "os",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "os",
+            "oid": "a4da2865-b1eb-4dc6-8d51-c1f613249a5b",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "deployment",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "deployment",
+            "oid": "4627837e-59d1-4f8c-ab16-35bfe1a9fc10",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "category",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "category",
+            "oid": "0a66d9a4-7d19-4113-b6cb-12a1a4ad02dd",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "version",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "version",
+            "oid": "528459e9-7cd7-40a8-b0a1-bef07842836c",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "configuration",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "configuration",
+            "oid": "8f0de95a-18e0-4162-970a-eda6dd511260",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "assignee",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "assignee",
+            "oid": "8af414ff-a567-4fb3-aa74-411eb71ceee9",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        }
+    ],
+    "customCode": {
+        "additionalParameters": {
+            "api_key": "2TkcvXu0dEq7UPLylaSt37CC",
+            "jira_url": "https://sisenseglobal.atlassian.net/"
+        },
+        "cellsDisable": [
+            0
+        ],
+        "codePath": "/work/storage_notebooks/custom_code_notebooks/notebooks/newNotebook2/newNotebook2.ipynb",
+        "dependsOn": [
+        ],
+        "language": "Python",
+        "lastUpdated": "2023-01-12T14:34:38.392Z",
+        "mode": "Full",
+        "noteBookId": "newNotebook2",
+        "serverUrl": "customcode:8888",
+        "timeout": 1200
+    },
+    "dataset": "f1b9d412-a182-4b01-b5f9-02ba86d70528",
+    "hidden": false,
+    "id": "New Custom Code newNotebook2",
+    "isMaterialized": null,
+    "name": "Jira Issues",
+    "oid": "cbd9da47-d530-4656-8838-6afe521a6729",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "column": "7b4bfbbb-6399-46de-87a5-b5156f5436b3",
+                "name": "status"
+            },
+            "type": "rename-column"
+        }
+    ],
+    "type": "custom_code"
+}

@@ -1,0 +1,144 @@
+{
+    "filters": [
+        {
+            "disabled": false,
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "created",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aNewIAAaJira",
+                    "fullname": "localhost/New Jira",
+                    "id": "localhost_aNewIAAaJira",
+                    "live": false,
+                    "title": "New Jira"
+                },
+                "datatype": "datetime",
+                "dim": "[Jira Issues.created (Calendar)]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "firstday": "mon",
+                "isDashboardFilter": true,
+                "level": "quarters",
+                "locale": "en-us",
+                "merged": true,
+                "table": "Jira Issues",
+                "title": "Created Date"
+            }
+        },
+        {
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "CSM Manager",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aNewIAAaJira",
+                    "fullname": "localhost/New Jira",
+                    "id": "localhost_aNewIAAaJira",
+                    "live": false,
+                    "title": "New Jira"
+                },
+                "datatype": "text",
+                "dim": "[csm_manager_mapping.CSM Manager]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "firstday": "mon",
+                "isDashboardFilter": true,
+                "locale": "en-us",
+                "merged": true,
+                "table": "csm_manager_mapping",
+                "title": "CSM Manager"
+            }
+        },
+        {
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "CSM",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aNewIAAaJira",
+                    "fullname": "localhost/New Jira",
+                    "id": "localhost_aNewIAAaJira",
+                    "live": false,
+                    "title": "New Jira"
+                },
+                "datatype": "text",
+                "dim": "[csm_manager_mapping.CSM]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "firstday": "mon",
+                "isDashboardFilter": true,
+                "locale": "en-us",
+                "merged": true,
+                "table": "csm_manager_mapping",
+                "title": "CSM"
+            }
+        },
+        {
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "customer",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aNewIAAaJira",
+                    "fullname": "localhost/New Jira",
+                    "id": "localhost_aNewIAAaJira",
+                    "live": false,
+                    "title": "New Jira"
+                },
+                "datatype": "text",
+                "dim": "[Jira Issues.customer]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "firstday": "mon",
+                "isDashboardFilter": true,
+                "locale": "en-us",
+                "table": "Jira Issues",
+                "title": "customer"
+            }
+        },
+        {
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "labels",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aNewIAAaJira",
+                    "fullname": "localhost/New Jira",
+                    "id": "localhost_aNewIAAaJira",
+                    "live": false,
+                    "title": "New Jira"
+                },
+                "datatype": "text",
+                "dim": "[Jira Issues.labels]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "firstday": "mon",
+                "isDashboardFilter": true,
+                "locale": "en-us",
+                "table": "Jira Issues",
+                "title": "labels"
+            }
+        }
+    ]
+}
