@@ -18,7 +18,7 @@
                                     }
                                 ],
                                 "index": 0,
-                                "pxlWidth": 1015.98,
+                                "pxlWidth": 734.234,
                                 "stretchable": false,
                                 "width": 76.5625
                             },
@@ -35,7 +35,7 @@
                                     }
                                 ],
                                 "index": 1,
-                                "pxlWidth": 311.016,
+                                "pxlWidth": 224.766,
                                 "stretchable": false,
                                 "width": 23.4375
                             }
@@ -46,9 +46,9 @@
                             {
                                 "elements": [
                                     {
-                                        "autoHeight": "302px",
+                                        "autoHeight": "284px",
                                         "defaultWidth": 512,
-                                        "height": "302px",
+                                        "height": "328px",
                                         "maxHeight": 2048,
                                         "maxWidth": 2048,
                                         "minHeight": 128,
@@ -57,16 +57,16 @@
                                     }
                                 ],
                                 "index": 0,
-                                "pxlWidth": 442.328,
+                                "pxlWidth": 266.18,
                                 "stretchable": false,
-                                "width": 33.333333333333336
+                                "width": 27.756653992395435
                             },
                             {
                                 "elements": [
                                     {
                                         "autoHeight": "172px",
                                         "defaultWidth": 512,
-                                        "height": "302px",
+                                        "height": "328px",
                                         "maxHeight": 2048,
                                         "maxWidth": 2048,
                                         "minHeight": 128,
@@ -75,16 +75,16 @@
                                     }
                                 ],
                                 "index": 1,
-                                "pxlWidth": 442.328,
+                                "pxlWidth": 342.758,
                                 "stretchable": false,
-                                "width": 33.333333333333336
+                                "width": 35.741444866920155
                             },
                             {
                                 "elements": [
                                     {
-                                        "autoHeight": "172px",
+                                        "autoHeight": "284px",
                                         "defaultWidth": 512,
-                                        "height": "302px",
+                                        "height": "328px",
                                         "maxHeight": 2048,
                                         "maxWidth": 2048,
                                         "minHeight": 128,
@@ -93,9 +93,9 @@
                                     }
                                 ],
                                 "index": 2,
-                                "pxlWidth": 442.328,
+                                "pxlWidth": 350.047,
                                 "stretchable": false,
-                                "width": 33.333333333333336
+                                "width": 36.501901140684424
                             }
                         ]
                     },
@@ -114,7 +114,7 @@
                                     }
                                 ],
                                 "index": 0,
-                                "pxlWidth": 1327,
+                                "pxlWidth": 959,
                                 "stretchable": false,
                                 "width": 100
                             }
@@ -125,9 +125,9 @@
                             {
                                 "elements": [
                                     {
-                                        "autoHeight": "744px",
+                                        "autoHeight": "756px",
                                         "defaultWidth": 512,
-                                        "height": "744px",
+                                        "height": "756px",
                                         "maxHeight": 2048,
                                         "maxWidth": 2048,
                                         "minHeight": 128,
@@ -136,16 +136,16 @@
                                     }
                                 ],
                                 "index": 0,
-                                "pxlWidth": 663.5,
+                                "pxlWidth": 479.5,
                                 "stretchable": false,
                                 "width": 50
                             },
                             {
                                 "elements": [
                                     {
-                                        "autoHeight": "146px",
+                                        "autoHeight": "128px",
                                         "defaultWidth": 512,
-                                        "height": "744px",
+                                        "height": "756px",
                                         "maxHeight": 2048,
                                         "maxWidth": 2048,
                                         "minHeight": 128,
@@ -154,7 +154,7 @@
                                     }
                                 ],
                                 "index": 1,
-                                "pxlWidth": 663.5,
+                                "pxlWidth": 479.5,
                                 "stretchable": false,
                                 "width": 50
                             }
@@ -175,7 +175,7 @@
                                     }
                                 ],
                                 "index": 0,
-                                "pxlWidth": 1327,
+                                "pxlWidth": 959,
                                 "stretchable": false,
                                 "width": 100
                             }
@@ -183,13 +183,29 @@
                     }
                 ],
                 "index": 0,
-                "pxlWidth": 1327,
+                "pxlWidth": 959,
                 "width": 100
             }
         ],
         "container": {
+            "sizzle1680726271810": {
+                "undefined": {
+                    "legend": [
+                        91,
+                        0,
+                        false
+                    ],
+                    "parentNode": [
+                        123.80580471667602,
+                        25,
+                        true
+                    ]
+                }
+            }
         },
         "instanceid": "09EEC-16F3-D0",
         "type": "columnar"
-    }
+    },
+    "previewLayout": [
+    ]
 }

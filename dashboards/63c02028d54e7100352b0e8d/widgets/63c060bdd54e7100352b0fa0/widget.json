@@ -5,7 +5,6 @@
             "duplicate": false
         }
     },
-    "continuousDates": false,
     "dashboardid": "63c02028d54e7100352b0e8d",
     "datasource": {
         "address": "LocalHost",
@@ -63,7 +62,6 @@
                     {
                         "format": {
                             "color": {
-                                "color": "#00cee6",
                                 "type": "color"
                             },
                             "mask": {
@@ -122,7 +120,6 @@
         "usedFormulasMapping": {
         }
     },
-    "nullAsZero": false,
     "oid": "63c060bdd54e7100352b0fa0",
     "options": {
         "autoUpdateOnEveryChange": true,
@@ -139,7 +136,7 @@
         "components": {
             "icon": {
                 "enabled": true,
-                "inactive": false
+                "inactive": true
             },
             "secondaryTitle": {
                 "enabled": true,
@@ -149,6 +146,56 @@
                 "enabled": true,
                 "inactive": false
             }
+        },
+        "indicator/gauge": {
+            "components": {
+                "labels": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "ticks": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "1",
+            "subtype": "round"
+        },
+        "indicator/numeric": {
+            "components": {
+                "icon": {
+                    "enabled": true,
+                    "inactive": false
+                },
+                "secondaryTitle": {
+                    "enabled": true,
+                    "inactive": true
+                },
+                "title": {
+                    "enabled": true,
+                    "inactive": false
+                }
+            },
+            "skin": "vertical",
+            "subtype": "simple"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
         },
         "skin": "vertical",
         "subtype": "simple"

@@ -17,10 +17,10 @@
     "drillToDashboardConfig": {
         "dashboardIds": [
         ],
-        "displayDashboardsPane": true,
+        "displayDashboardsPane": false,
         "displayFilterPane": true,
-        "displayHeaderRow": true,
-        "displayToolbarRow": true,
+        "displayHeaderRow": false,
+        "displayToolbarRow": false,
         "drillToDashboardByName": false,
         "drillToDashboardMenuCaption": "Jump to dashboard",
         "drillToDashboardNavigateType": 2,
@@ -48,6 +48,57 @@
         "volatile": false
     },
     "metadata": {
+        "drillHistory": [
+            {
+                "field": {
+                    "id": "[csm_manager_mapping.CSM Manager]",
+                    "index": 0
+                },
+                "jaql": {
+                    "column": "CSM Manager",
+                    "datatype": "text",
+                    "dim": "[csm_manager_mapping.CSM Manager]",
+                    "merged": true,
+                    "sort": null,
+                    "table": "csm_manager_mapping",
+                    "title": "CSM Manager"
+                },
+                "panel": "rows",
+                "parent": {
+                    "field": {
+                        "id": "[csm_manager_mapping.Segment]",
+                        "index": 0
+                    },
+                    "instanceid": "FEE13-1077-B1",
+                    "jaql": {
+                        "column": "Segment",
+                        "datatype": "text",
+                        "dim": "[csm_manager_mapping.Segment]",
+                        "merged": true,
+                        "sort": null,
+                        "table": "csm_manager_mapping",
+                        "title": "Segment"
+                    },
+                    "panel": "rows"
+                },
+                "through": {
+                    "jaql": {
+                        "column": "Segment",
+                        "datatype": "text",
+                        "dim": "[csm_manager_mapping.Segment]",
+                        "filter": {
+                            "explicit": true,
+                            "members": [
+                                "corp"
+                            ],
+                            "multiSelection": true
+                        },
+                        "table": "csm_manager_mapping",
+                        "title": "Segment"
+                    }
+                }
+            }
+        ],
         "ignore": {
             "all": false,
             "dimensions": [
@@ -69,6 +120,7 @@
                             "datatype": "text",
                             "dim": "[csm_manager_mapping.Segment]",
                             "merged": true,
+                            "sort": null,
                             "table": "csm_manager_mapping",
                             "title": "Segment"
                         },
@@ -86,7 +138,6 @@
                         },
                         "format": {
                             "color": {
-                                "color": "transparent",
                                 "type": "color"
                             },
                             "mask": {
@@ -133,7 +184,6 @@
                         },
                         "format": {
                             "color": {
-                                "color": "transparent",
                                 "type": "color"
                             },
                             "mask": {
@@ -183,6 +233,7 @@
                             },
                             "datatype": "numeric",
                             "formula": "([CCC5E-264],[BD84C-1F5])",
+                            "sort": null,
                             "title": "OOS",
                             "type": "measure"
                         },
@@ -285,6 +336,7 @@
                             },
                             "datatype": "numeric",
                             "formula": "([672A0-306]-[BCDAE-1B1])/[672A0-306]",
+                            "sort": null,
                             "title": "Good Ticket %",
                             "type": "measure"
                         },
@@ -314,6 +366,10 @@
         "drillToAnywhere": true,
         "imageColumns": [
         ],
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
         "selector": false,
         "triggersDomready": true
     },

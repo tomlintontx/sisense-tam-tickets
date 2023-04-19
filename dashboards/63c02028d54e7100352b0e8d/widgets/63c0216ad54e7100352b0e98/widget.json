@@ -5,7 +5,6 @@
             "duplicate": false
         }
     },
-    "continuousDates": false,
     "dashboardid": "63c02028d54e7100352b0e8d",
     "datasource": {
         "address": "LocalHost",
@@ -51,7 +50,6 @@
     },
     "drilledDashboardDisplay": {
     },
-    "hasExcessiveSeries": false,
     "metadata": {
         "drillHistory": [
             {
@@ -143,6 +141,7 @@
             {
                 "items": [
                     {
+                        "disabled": false,
                         "format": {
                             "continuous": false
                         },
@@ -154,6 +153,17 @@
                             "table": "Jira Issues",
                             "title": "labels"
                         }
+                    },
+                    {
+                        "disabled": true,
+                        "instanceid": "460A5-B279-6D",
+                        "jaql": {
+                            "column": "customer",
+                            "datatype": "text",
+                            "dim": "[Jira Issues.customer]",
+                            "table": "Jira Issues",
+                            "title": "customer"
+                        }
                     }
                 ],
                 "name": "categories"
@@ -163,7 +173,6 @@
                     {
                         "format": {
                             "color": {
-                                "color": "#00cee6",
                                 "type": "color"
                             },
                             "mask": {
@@ -207,7 +216,6 @@
         "usedFormulasMapping": {
         }
     },
-    "nullAsZero": false,
     "oid": "63c0216ad54e7100352b0e98",
     "options": {
         "autoUpdateOnEveryChange": true,
@@ -222,6 +230,7 @@
             "min": null
         },
         "selector": true,
+        "selectorLocked": false,
         "triggersDomready": true
     },
     "prevSortObjects": [
@@ -256,6 +265,12 @@
                     "plural": "labels",
                     "singular": "labels",
                     "title": "labels"
+                },
+                {
+                    "id": "customer",
+                    "plural": "customer",
+                    "singular": "customer",
+                    "title": "customer"
                 }
             ],
             "up_sentiment": "good",

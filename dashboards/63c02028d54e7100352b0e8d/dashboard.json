@@ -16,12 +16,14 @@
     ],
     "layout": "./layout.json",
     "oid": "63c02028d54e7100352b0e8d",
+    "script": "./script.js",
     "settings": {
         "autoUpdateOnFiltersChange": true
     },
     "style": {
-        "name": "vivid",
+        "name": "Basic",
         "palette": {
+            "_id": "63924e8252f528001bd5d7e7",
             "colors": [
                 "#00cee6",
                 "#9b9bd7",
@@ -30,6 +32,7 @@
                 "#fbb755",
                 "#218A8C"
             ],
+            "isDefault": true,
             "isSystem": true,
             "name": "Vivid",
             "sortOrder": 10,
@@ -53,7 +56,7 @@
         "schedule": "* * * * * *",
         "startAt": "2023-01-12",
         "subscribe": false,
-        "timezone": 360,
+        "timezone": 300,
         "type": "onUpdate",
         "tzName": "America/Chicago"
     },

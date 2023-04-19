@@ -17,10 +17,10 @@
     "drillToDashboardConfig": {
         "dashboardIds": [
         ],
-        "displayDashboardsPane": true,
+        "displayDashboardsPane": false,
         "displayFilterPane": true,
-        "displayHeaderRow": true,
-        "displayToolbarRow": true,
+        "displayHeaderRow": false,
+        "displayToolbarRow": false,
         "drillToDashboardByName": false,
         "drillToDashboardMenuCaption": "Jump to dashboard",
         "drillToDashboardNavigateType": 2,
@@ -71,6 +71,7 @@
                             "datatype": "text",
                             "dim": "[csm_manager_mapping.CSM]",
                             "merged": true,
+                            "sort": null,
                             "table": "csm_manager_mapping",
                             "title": "CSM"
                         },
@@ -88,7 +89,6 @@
                         },
                         "format": {
                             "color": {
-                                "color": "transparent",
                                 "type": "color"
                             },
                             "mask": {
@@ -135,7 +135,6 @@
                         },
                         "format": {
                             "color": {
-                                "color": "transparent",
                                 "type": "color"
                             },
                             "mask": {
@@ -185,6 +184,7 @@
                             },
                             "datatype": "numeric",
                             "formula": "([CCC5E-264],[BD84C-1F5])",
+                            "sort": null,
                             "title": "OOS",
                             "type": "measure"
                         },
@@ -287,6 +287,7 @@
                             },
                             "datatype": "numeric",
                             "formula": "([672A0-306]-[BCDAE-1B1])/[672A0-306]",
+                            "sort": null,
                             "title": "Good Ticket %",
                             "type": "measure"
                         },

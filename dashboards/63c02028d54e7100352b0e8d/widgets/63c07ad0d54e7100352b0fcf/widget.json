@@ -5,7 +5,6 @@
             "duplicate": false
         }
     },
-    "continuousDates": false,
     "dashboardid": "63c02028d54e7100352b0e8d",
     "datasource": {
         "address": "LocalHost",
@@ -48,7 +47,6 @@
         "showJTDIcon": true,
         "volatile": false
     },
-    "hasExcessiveSeries": false,
     "metadata": {
         "ignore": {
             "all": false,
@@ -81,7 +79,92 @@
                     {
                         "format": {
                             "color": {
-                                "color": "#00cee6",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "7471E-A4CC-41",
+                        "jaql": {
+                            "context": {
+                                "[1DEDE-DC5]": {
+                                    "column": "status",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aNewIAAaJira",
+                                        "fullname": "LocalHost/New Jira",
+                                        "id": "aLOCALHOST_aNEWIAAaJIRA",
+                                        "title": "New Jira"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Jira Issues.status]",
+                                    "dimension": "[Jira Issues.assignee]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "Assigned",
+                                            "In Progress",
+                                            "To Do",
+                                            "Waiting on Response"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "firstday": "mon",
+                                    "locale": "en-us",
+                                    "table": "Jira Issues",
+                                    "title": "status"
+                                },
+                                "[66D20-068]": {
+                                    "agg": "count",
+                                    "column": "ticket_key",
+                                    "datatype": "text",
+                                    "dim": "[Jira Issues.ticket_key]",
+                                    "table": "Jira Issues",
+                                    "title": "# of unique ticket_key"
+                                },
+                                "[E50F5-08B]": {
+                                    "column": "status",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aNewIAAaJira",
+                                        "fullname": "LocalHost/New Jira",
+                                        "id": "aLOCALHOST_aNEWIAAaJIRA",
+                                        "title": "New Jira"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[Jira Issues.status]",
+                                    "dimension": "[Jira Issues.assignee]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "Done"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "firstday": "mon",
+                                    "locale": "en-us",
+                                    "table": "Jira Issues",
+                                    "title": "status"
+                                }
+                            },
+                            "formula": "([66D20-068],[1DEDE-DC5])",
+                            "title": "Open Tickets",
+                            "type": "measure"
+                        }
+                    },
+                    {
+                        "format": {
+                            "color": {
                                 "type": "color"
                             },
                             "mask": {
@@ -180,6 +263,38 @@
                             "table": "Jira Issues",
                             "title": "assignee"
                         }
+                    },
+                    {
+                        "instanceid": "BBD70-08F0-90",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "labels",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aNewIAAaJira",
+                                "fullname": "LocalHost/New Jira",
+                                "id": "aLOCALHOST_aNEWIAAaJIRA",
+                                "title": "New Jira"
+                            },
+                            "datatype": "text",
+                            "dim": "[Jira Issues.labels]",
+                            "dimension": "[Jira Issues.assignee]",
+                            "filter": {
+                                "exclude": {
+                                    "members": [
+                                        "OOS"
+                                    ]
+                                },
+                                "explicit": false,
+                                "isCondition": true,
+                                "multiSelection": true
+                            },
+                            "firstday": "mon",
+                            "level": "years",
+                            "locale": "en-us",
+                            "table": "Jira Issues",
+                            "title": "labels"
+                        }
                     }
                 ],
                 "name": "filters"
@@ -188,7 +303,6 @@
         "usedFormulasMapping": {
         }
     },
-    "nullAsZero": false,
     "oid": "63c07ad0d54e7100352b0fcf",
     "options": {
         "autoUpdateOnEveryChange": true,
@@ -232,6 +346,12 @@
                     "plural": "assignee",
                     "singular": "assignee",
                     "title": "assignee"
+                },
+                {
+                    "id": "labels",
+                    "plural": "labels",
+                    "singular": "labels",
+                    "title": "labels"
                 }
             ],
             "up_sentiment": "good",
@@ -243,8 +363,8 @@
         "seriesLabels": {
             "enabled": false,
             "labels": {
-                "enabled": false,
-                "stacked": false,
+                "enabled": true,
+                "stacked": true,
                 "stackedPercentage": false,
                 "types": {
                     "count": false,
@@ -304,7 +424,7 @@
             }
         }
     },
-    "subtype": "column/classic",
+    "subtype": "column/stackedcolumn",
     "title": "Completed Tickets by TAM",
     "type": "chart/column"
 }

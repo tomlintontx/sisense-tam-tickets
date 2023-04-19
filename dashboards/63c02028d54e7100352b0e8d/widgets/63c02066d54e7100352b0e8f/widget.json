@@ -5,7 +5,6 @@
             "duplicate": false
         }
     },
-    "continuousDates": false,
     "dashboardid": "63c02028d54e7100352b0e8d",
     "datasource": {
         "address": "LocalHost",
@@ -49,7 +48,6 @@
         "showJTDIcon": true,
         "volatile": false
     },
-    "hasExcessiveSeries": false,
     "metadata": {
         "ignore": {
             "all": false,
@@ -62,7 +60,12 @@
             {
                 "items": [
                     {
+                        "activeHierarchy": {
+                            "_id": "calendar",
+                            "title": "Calendar Hierarchy"
+                        },
                         "format": {
+                            "continuous": false,
                             "mask": {
                                 "dateAndTime": "MM/dd/y HH:mm",
                                 "days": "shortDate",
@@ -97,7 +100,6 @@
                     {
                         "format": {
                             "color": {
-                                "color": "#00cee6",
                                 "type": "color"
                             },
                             "mask": {
@@ -132,7 +134,6 @@
                     {
                         "format": {
                             "color": {
-                                "color": "#9b9bd7",
                                 "type": "color"
                             },
                             "mask": {
@@ -146,7 +147,8 @@
                                 "isdefault": true,
                                 "separated": true,
                                 "type": "number"
-                            }
+                            },
+                            "nullzero": true
                         },
                         "instanceid": "E0F4C-355D-8A",
                         "jaql": {
@@ -213,7 +215,6 @@
         "usedFormulasMapping": {
         }
     },
-    "nullAsZero": false,
     "oid": "63c02066d54e7100352b0e8f",
     "options": {
         "autoUpdateOnEveryChange": true,
@@ -224,11 +225,22 @@
             "min": null
         },
         "selector": true,
+        "selectorLocked": false,
         "triggersDomready": true
     },
     "prevSortObjects": [
     ],
     "realTimeRefreshing": false,
+    "showNulls": {
+        "CSM": false,
+        "CSM Manager": false,
+        "Created Date": false,
+        "Months in created": false,
+        "OOS Tickets": false,
+        "Tickets": false,
+        "customer": false,
+        "labels": false
+    },
     "style": {
         "dataLimits": {
             "categoriesCapacity": 100000,
@@ -317,7 +329,6 @@
         }
     },
     "subtype": "line/basic",
-    "tickLevel": "month",
     "title": "TAM Tickets by Created Date",
     "type": "chart/line"
 }

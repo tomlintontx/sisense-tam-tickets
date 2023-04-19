@@ -114,6 +114,7 @@
             }
         },
         {
+            "disabled": false,
             "isCascading": false,
             "jaql": {
                 "collapsed": true,
@@ -121,8 +122,8 @@
                 "datasource": {
                     "address": "LocalHost",
                     "database": "aNewIAAaJira",
-                    "fullname": "localhost/New Jira",
-                    "id": "localhost_aNewIAAaJira",
+                    "fullname": "LocalHost/New Jira",
+                    "id": "aLOCALHOST_aNEWIAAaJIRA",
                     "live": false,
                     "title": "New Jira"
                 },

@@ -13,3 +13,4 @@ prism.jumpToDashboard(
 		displayToolbarRow: false,
 	},
 );
+

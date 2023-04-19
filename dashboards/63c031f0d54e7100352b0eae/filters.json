@@ -36,41 +36,15 @@
                 },
                 "datatype": "text",
                 "dim": "[Jira Issues.labels]",
-                "dimension": "[csm_manager_mapping.CSM]",
                 "filter": {
                     "explicit": true,
                     "members": [
-                        "OOS"
+                        "tech_guidance"
                     ],
                     "multiSelection": true
                 },
-                "firstday": "mon",
-                "locale": "en-us",
                 "table": "Jira Issues",
                 "title": "labels"
-            }
-        },
-        {
-            "jaql": {
-                "column": "CSM",
-                "datasource": {
-                    "address": "LocalHost",
-                    "database": "aNewIAAaJira",
-                    "fullname": "LocalHost/New Jira",
-                    "id": "aLOCALHOST_aNEWIAAaJIRA",
-                    "title": "New Jira"
-                },
-                "datatype": "text",
-                "dim": "[csm_manager_mapping.CSM]",
-                "filter": {
-                    "members": [
-                        "Dajon Alford"
-                    ]
-                },
-                "merged": true,
-                "sort": null,
-                "table": "csm_manager_mapping",
-                "title": "CSM"
             }
         },
         {
@@ -126,6 +100,33 @@
                 "merged": true,
                 "table": "csm_manager_mapping",
                 "title": "CSM Manager"
+            }
+        },
+        {
+            "jaql": {
+                "collapsed": true,
+                "column": "CSM",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aNewIAAaJira",
+                    "fullname": "localhost/New Jira",
+                    "id": "localhost_aNewIAAaJira",
+                    "live": false,
+                    "title": "New Jira"
+                },
+                "datatype": "text",
+                "dim": "[csm_manager_mapping.CSM]",
+                "filter": {
+                    "all": true,
+                    "explicit": false,
+                    "multiSelection": true
+                },
+                "firstday": "mon",
+                "isDashboardFilter": true,
+                "locale": "en-us",
+                "merged": true,
+                "table": "csm_manager_mapping",
+                "title": "CSM"
             }
         },
         {

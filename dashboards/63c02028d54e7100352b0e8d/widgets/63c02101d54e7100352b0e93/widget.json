@@ -15,12 +15,13 @@
     },
     "desc": null,
     "drillToDashboardConfig": {
+        "custom": true,
         "dashboardIds": [
         ],
-        "displayDashboardsPane": true,
-        "displayFilterPane": true,
-        "displayHeaderRow": true,
-        "displayToolbarRow": true,
+        "displayDashboardsPane": false,
+        "displayFilterPane": false,
+        "displayHeaderRow": false,
+        "displayToolbarRow": false,
         "drillToDashboardByName": false,
         "drillToDashboardMenuCaption": "Jump to dashboard",
         "drillToDashboardNavigateType": 2,
@@ -74,6 +75,21 @@
                             "title": "os"
                         },
                         "panel": "rows"
+                    },
+                    {
+                        "field": {
+                            "id": "[Jira Issues.deployment]",
+                            "index": 1
+                        },
+                        "instanceid": "E8CD2-EDF9-EA",
+                        "jaql": {
+                            "column": "deployment",
+                            "datatype": "text",
+                            "dim": "[Jira Issues.deployment]",
+                            "table": "Jira Issues",
+                            "title": "deployment"
+                        },
+                        "panel": "rows"
                     }
                 ],
                 "name": "rows"
@@ -83,11 +99,10 @@
                     {
                         "field": {
                             "id": "[Jira Issues.ticket_key]_count",
-                            "index": 1
+                            "index": 2
                         },
                         "format": {
                             "color": {
-                                "color": "transparent",
                                 "type": "color"
                             },
                             "mask": {
@@ -164,6 +179,12 @@
                     "plural": "os",
                     "singular": "os",
                     "title": "os"
+                },
+                {
+                    "id": "deployment",
+                    "plural": "deployment",
+                    "singular": "deployment",
+                    "title": "deployment"
                 }
             ],
             "up_sentiment": "good",

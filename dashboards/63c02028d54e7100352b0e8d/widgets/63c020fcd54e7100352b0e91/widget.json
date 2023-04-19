@@ -15,15 +15,16 @@
     },
     "desc": null,
     "drillToDashboardConfig": {
+        "custom": true,
         "dashboardIds": [
         ],
-        "displayDashboardsPane": true,
-        "displayFilterPane": true,
-        "displayHeaderRow": true,
-        "displayToolbarRow": true,
+        "displayDashboardsPane": false,
+        "displayFilterPane": false,
+        "displayHeaderRow": false,
+        "displayToolbarRow": false,
         "drillToDashboardByName": false,
         "drillToDashboardMenuCaption": "Jump to dashboard",
-        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateType": 1,
         "drillToDashboardNavigateTypeCharts": 1,
         "drillToDashboardNavigateTypeOthers": 3,
         "drillToDashboardNavigateTypePivot": 2,
@@ -61,22 +62,34 @@
             {
                 "items": [
                     {
-                        "field": {
-                            "id": "[Jira Issues.deployment]",
-                            "index": 0
+                        "format": {
+                            "mask": {
+                                "dateAndTime": "MM/dd/y HH:mm",
+                                "days": "shortDate",
+                                "minutes": "HH:mm",
+                                "months": "MMM yyyy",
+                                "quarters": "yyyy Q",
+                                "weeks": "ww yyyy",
+                                "years": "yyyy"
+                            }
                         },
-                        "instanceid": "BE2DC-DF40-15",
+                        "hierarchies": [
+                            "calendar",
+                            "calendar - weeks"
+                        ],
+                        "instanceid": "F051A-94C8-22",
                         "jaql": {
-                            "column": "deployment",
-                            "datatype": "text",
-                            "dim": "[Jira Issues.deployment]",
+                            "column": "created",
+                            "datatype": "datetime",
+                            "dim": "[Jira Issues.created (Calendar)]",
+                            "level": "months",
+                            "merged": true,
                             "table": "Jira Issues",
-                            "title": "Hosting Model"
-                        },
-                        "panel": "rows"
+                            "title": "Months in created"
+                        }
                     }
                 ],
-                "name": "rows"
+                "name": "x-axis"
             },
             {
                 "items": [
@@ -86,16 +99,16 @@
                             "index": 1
                         },
                         "format": {
-                            "color": {
-                                "color": "transparent",
-                                "type": "color"
-                            },
                             "mask": {
-                                "b": true,
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
                                 "decimals": "auto",
                                 "isdefault": true,
                                 "separated": true,
-                                "t": true,
                                 "type": "number"
                             }
                         },
@@ -115,11 +128,60 @@
             },
             {
                 "items": [
+                    {
+                        "field": {
+                            "id": "[Jira Issues.deployment]",
+                            "index": 0
+                        },
+                        "format": {
+                        },
+                        "instanceid": "BE2DC-DF40-15",
+                        "jaql": {
+                            "column": "deployment",
+                            "datatype": "text",
+                            "dim": "[Jira Issues.deployment]",
+                            "table": "Jira Issues",
+                            "title": "Hosting Model"
+                        },
+                        "panel": "rows"
+                    }
                 ],
-                "name": "columns"
+                "name": "break by"
             },
             {
                 "items": [
+                    {
+                        "instanceid": "1BDD5-30FB-10",
+                        "jaql": {
+                            "collapsed": true,
+                            "column": "deployment",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aNewIAAaJira",
+                                "fullname": "LocalHost/New Jira",
+                                "id": "aLOCALHOST_aNEWIAAaJIRA",
+                                "title": "New Jira"
+                            },
+                            "datatype": "text",
+                            "dim": "[Jira Issues.deployment]",
+                            "dimension": "[Jira Issues.created (Calendar)]",
+                            "filter": {
+                                "exclude": {
+                                    "members": [
+                                        "N\\A"
+                                    ]
+                                },
+                                "explicit": false,
+                                "isCondition": true,
+                                "multiSelection": true
+                            },
+                            "firstday": "mon",
+                            "level": "years",
+                            "locale": "en-us",
+                            "table": "Jira Issues",
+                            "title": "Hosting Model"
+                        }
+                    }
                 ],
                 "name": "filters"
             }
@@ -131,12 +193,12 @@
     "options": {
         "autoUpdateOnEveryChange": true,
         "dashboardFiltersMode": "select",
-        "drillTarget": {
-            "caption": "_drill_ TAM Tickets",
-            "oid": "63c031f0d54e7100352b0eae"
-        },
         "drillToAnywhere": true,
-        "selector": false,
+        "previousScrollerLocation": {
+            "max": null,
+            "min": null
+        },
+        "selector": true,
         "triggersDomready": true
     },
     "prevSortObjects": [
@@ -145,13 +207,21 @@
     "script": "./script.js",
     "script_old": "",
     "style": {
-        "automaticHeight": true,
-        "colors": {
-            "columns": false,
-            "headers": false,
-            "members": false,
-            "rows": true,
-            "totals": false
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
         },
         "narration": {
             "aggregation": "sum",
@@ -159,6 +229,12 @@
             "enabled": false,
             "format": "bullets",
             "labels": [
+                {
+                    "id": "months_in_created",
+                    "plural": "Months in created",
+                    "singular": "Months in created",
+                    "title": "Months in created"
+                },
                 {
                     "id": "hosting_model",
                     "plural": "Hosting Model",
@@ -169,10 +245,61 @@
             "up_sentiment": "good",
             "verbosity": "medium"
         },
-        "pageSize": 25,
-        "scroll": false
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
     },
-    "subtype": "pivot2",
+    "subtype": "line/basic",
     "title": "Tickets by Hosting Model",
-    "type": "pivot2"
+    "type": "chart/line"
 }
